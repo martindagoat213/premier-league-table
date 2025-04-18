@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Premier League</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0a0f1e, #1e2a38);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: #2e093d; /* Color del logo Premier League */
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .header img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #ffffff;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    table {
+      margin: 40px auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 16px 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #5a189a;
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #333;
+    }
+
+    td {
+      vertical-align: middle;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #333;
+    }
+
+    tr td:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img.logo {
+      width: 36px;
+      height: 36px;
+      margin-right: 14px;
+      border-radius: 5px;
+    }
+
+    td + td {
+      border-left: 3px solid #999;
+      text-align: center;
+    }
+
+    .logo-premier {
+      width: 120px;
+      height: 120px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://static.vecteezy.com/system/resources/previews/015/863/623/large_2x/england-premier-league-logo-on-transparent-background-free-vector.jpg" alt="Premier League Logo" class="logo-premier">
+    <h1>Premier League</h1>
+    <img src="https://static.vecteezy.com/system/resources/previews/015/863/623/large_2x/england-premier-league-logo-on-transparent-background-free-vector.jpg" alt="Premier League Logo" class="logo-premier">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><img src="https://crests.football-data.org/64.png" class="logo">Liverpool</td><td>1</td></tr>
+      <tr><td><img src="https://crests.football-data.org/62.png" class="logo">Everton</td><td>0</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Nottingham_Forest_F.C._logo.svg" class="logo">Nottingham Forest F.C</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/354.png" class="logo">Crystal Palace</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/63.png" class="logo">Fulham</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/65.png" class="logo">Manchester City</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/66.png" class="logo">Manchester United</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/397.png" class="logo">Brighton & Hove Albion</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/61.png" class="logo">Chelsea</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/57.png" class="logo">Arsenal</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/73.png" class="logo">Tottenham Hotspur</td><td>0</td></tr>
+      <tr><td><img src="https://crests.football-data.org/58.png" class="logo">Aston Villa</td><td>0</td></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
