@@ -156,6 +156,39 @@
 </table>
 
 <script>
+  <script>
+  const tbody = document.querySelector("#tabla tbody");
+  const rows = Array.from(tbody.rows);
+  const originalOrder = rows.map(row => row.cells[0].textContent.trim());
+
+  // Ordena por:
+  // 1. Equipos que han jugado (P > 0) primero
+  // 2. Entre ellos, por GD (mayor a menor)
+  rows.sort((a, b) => {
+    const pA = parseInt(a.cells[1].textContent);
+    const pB = parseInt(b.cells[1].textContent);
+    const gdA = parseInt(a.cells[5].textContent);
+    const gdB = parseInt(b.cells[5].textContent);
+
+    if (pA === 0 && pB === 0) return 0; // ambos no han jugado
+    if (pA === 0) return 1;             // A no ha jugado → va después
+    if (pB === 0) return -1;            // B no ha jugado → va después
+    return gdB - gdA;                   // los que han jugado → ordenar por GD
+  });
+
+  tbody.innerHTML = "";
+  rows.forEach((row, index) => {
+    const teamName = row.cells[0].textContent.trim();
+    const originalIndex = originalOrder.indexOf(teamName);
+
+    if (originalIndex > index) {
+      row.classList.add("up");
+    } else if (originalIndex < index) {
+      row.classList.add("down");
+    }
+
+    tbody.appendChild(row);
+  });
   const tbody = document.querySelector("#tabla tbody");
   const rows = Array.from(tbody.rows);
   const originalOrder = rows.map(row => row.cells[0].textContent.trim());
