@@ -189,29 +189,7 @@
 
     tbody.appendChild(row);
   });
-  const tbody = document.querySelector("#tabla tbody");
-  const rows = Array.from(tbody.rows);
-  const originalOrder = rows.map(row => row.cells[0].textContent.trim());
-
-  rows.sort((a, b) => {
-    const puntosA = parseInt(a.cells[6].textContent);
-    const puntosB = parseInt(b.cells[6].textContent);
-    return puntosB - puntosA;
-  });
-
-  tbody.innerHTML = "";
-  rows.forEach((row, index) => {
-    const teamName = row.cells[0].textContent.trim();
-    const originalIndex = originalOrder.indexOf(teamName);
-
-    if (originalIndex > index) {
-      row.classList.add("up");
-    } else if (originalIndex < index) {
-      row.classList.add("down");
-    }
-
-    tbody.appendChild(row);
-  });
+  
 </script>
 
 </body>
